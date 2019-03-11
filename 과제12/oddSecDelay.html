@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var i = 1;
+    function func(){
+
+        while(i%2==1){
+          if(i>6){
+            return;
+          }
+          document.write(i+" 초입니다.");
+          i++;
+        }
+
+      if(i%2==0){
+        i++;
+      setTimeout(func,2000);
+    }
+    }
+    setTimeout(func,1000);
+
+    </script>
+
+  </body>
+</html>

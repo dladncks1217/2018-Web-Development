@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>201814129_7_7</title>
+    <style media="screen">
+      #button{
+      width:200px;
+      font-size:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" id="button"value="확인해보기">
+    <script type="text/javascript">
+      var button = document.getElementById('button');
+      button.addEventListener('click',function(){
+      var sleep_time = prompt('잠자기까지 걸리는 시간을 입력하세요 ex)2');
+      if(sleep_time<1){
+        alert('아주 훌륭합니다!');
+      }
+      else if(sleep_time>=1&&sleep_time<=2){
+        alert('약간의 수면장애가 있으시군요');
+
+      }
+      else if(sleep_time>2){
+        alert('수면장애가 있으시군요.');
+      }
+      else{
+        alert('잘못 입력하셨습니다.');
+      }
+      })
+
+
+
+    </script>
+
+  </body>
+</html>

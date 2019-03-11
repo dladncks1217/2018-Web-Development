@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>201814129 임우찬 과제10</title>
+  </head>
+  <body>
+    <input type="text" id="textbox">
+    <input type="button" value="입력" onclick="btnclick()">
+    <input type="button" value="최댓값 확인" onclick="Maxnumber1()">
+    <br>
+    <input type="text" value="" id="textboxMax" >
+
+    <script type="text/javascript">
+      var array =[];
+      var i = 0;
+      var max_number = 0;
+
+      function btnclick(){
+        array[i]=parseInt(document.getElementById('textbox').value);
+
+        document.getElementById('textbox').value="";
+        document.getElementById('textbox').focus();
+
+
+
+        if(i>=0){
+          max_number = Math.max.apply(this,array);
+
+        }
+
+        i++;
+        console.log(max_number);
+      }
+
+      function Maxnumber1(){
+        document.getElementById('textboxMax').value = max_number;
+
+      }
+
+
+
+
+    </script>
+
+  </body>
+</html>

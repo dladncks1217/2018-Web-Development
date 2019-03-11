@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>201814129임우찬 스톱워치</title>
+  </head>
+  <body>
+    <input type="button" value="start"onclick="setTimeout(watch_start,0); stops=false">
+    <input type="button" value="stop" onclick="stops=true">
+    <input type="button" value="reset" id="reset" onclick="resets()">
+    <br/>
+    <input type="text" value="0.00" readonly id="seconds">
+    <script type="text/javascript">
+      var stops = false;
+
+      function watch_start(){
+        dom = document.getElementById('seconds');
+        dom.value = (parseFloat(dom.value)+0.01).toFixed(2);
+        if(!stops) setTimeout(watch_start,10);
+      }
+
+      function resets(){
+        stops=true;
+        document.getElementById("seconds").value= "0.00";
+      }
+
+    </script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>짝수홀수</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var number = parseInt(prompt("숫자를 입력하시면 짝수홀수 확인해드립니다."));
+
+      function number_check(){
+        if(number%2==0){
+          document.write("짝수입니다.")
+        }
+        else if(number%2!=0){
+          document.write("홀수입니다.")
+        }
+        else if(number==0){
+          document.write("0입니다.");
+        }
+        else{
+          alert("잘못입력");
+        }
+      }
+
+      number_check();
+
+
+    </script>
+  </body>
+</html>

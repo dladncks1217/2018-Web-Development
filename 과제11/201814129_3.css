@@ -1,0 +1,50 @@
+.hello {
+    text-align: right;
+}
+
+.hi {
+    background-color:green;
+}
+td{
+  text-align: center;
+}
+*{
+
+  color:red;
+  font-family:serif;
+}
+body{
+    background-color: yellow;
+}
+h1{
+  text-shadow: 20px 20px 20px black;
+}
+li:before{
+  content:"★"; color:red;
+}
+#table_width{
+  width:400px;
+}
+.table_fontcolor{
+  color:black;
+}
+td:before{
+  content:" ●"; color:red;
+}
+td:hover{
+  background-color:green;
+}
+#rullet{
+  width:200px;
+  font-size:20px;
+}
+#button_1{
+  width:100px;
+  font-size:10px;
+  background-color:white;
+}
+#button_2{
+  width:100px;
+  font-size:10px;
+  background-color:white;
+}
