@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>stopwatch</title>
+  </head>
+  <body>
+    <input type="button" value="시작" id="startbtn" onclick="time_go(); ">
+    <input type="button" value="정지" id="stopbtn" onclick="stop = false">
+    <input type="text" readonly id="textbox" value="0" >
+
+    <script type="text/javascript">
+      var stopped = false;
+
+
+      function time_go(){
+          stop = true;
+          var textbox = document.getElementById('textbox');
+          textbox.value = parseInt(text.value)+1;
+          if(!stopped){
+            setTimeout(time_go,1000);
+          }
+      }
+
+
+
+    </script>
+
+
+  </body>
+</html>

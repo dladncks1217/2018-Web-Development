@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>asdfasdf</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+    <script type="text/javascript">
+      var canvas = document.getElementById("myCanvas");
+      var myContext = canvas.getContext("2d");
+
+      myContext.beginPath();
+      myContext.arc(240, 150, 60, 0, 2*Math.PI); // 360도 원호를 그려 원 그리기
+      myContext.stroke();
+
+      var lines = canvas.getContext("2d");
+
+      lines.moveTo(240,210);
+      lines.lineTo(240,400);
+      lines.moveTo(180,250);
+      lines.lineTo(300,250);
+      lines.stroke();
+    </script>
+  </body>
+</html>

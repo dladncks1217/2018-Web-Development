@@ -1,0 +1,10 @@
+  var id, password;
+        id = prompt('아이디를 입력해주세요');
+        if (id === ' hello') {
+            password = prompt('비밀번호를 입력해주세요');
+            if (password === 'world') {
+                alert('로그인에 성공하였습니다.');
+            }
+            else alert('비밀번호가 틀렸습니다.');
+        }
+        else alert('아이디가 틀렸습니다.');

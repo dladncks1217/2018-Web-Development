@@ -1,0 +1,13 @@
+var a=prompt('첫 수의 값을 입력하세요');
+
+var b=prompt('두 번째 수의 값을 입력하세요');
+
+var c;
+
+c=a+b;
+
+if(c !== number){
+	alert('숫자를 입력하세요')
+};
+
+else if{ alert(c)};

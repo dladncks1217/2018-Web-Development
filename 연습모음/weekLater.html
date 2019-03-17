@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var now = new Date();
+      var n_month = now.getMonth()+1;
+      var n_date = now.getDate();
+
+      var week = new Date();
+      var date = now.getDate();
+      var s_date = week.setDate(date+7);
+      document.write("오늘은"+n_month+"월"+n_date+"일 입니다."+"<br>");
+      document.write("내일은"+n_month+"월"+now.toLocaleString(s_date)+"일 입니다.")
+
+
+
+    </script>
+  </body>
+</html>

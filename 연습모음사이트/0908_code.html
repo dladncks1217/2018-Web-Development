@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>9월8일 연습</title>
+    <style>
+        .boxx{
+            margin:200px auto;
+            padding:40px;
+            height:50px;
+            width:50px;
+            border:double solid;
+            box-shadow:0px 0px 3px 3px;
+        }
+        .taable{
+
+            width:70px;
+            font-size:15px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>9월8일 연습</h1>
+    <hr />
+    <table id="tablee" class="taable" border="1" onclick="color_change()">
+        <tr>
+            <th>색깔</th>
+        </tr>
+        <tr>
+             <td value="white"><a>하얀색</a></td><td value="red">빨간색</td><td value="yellow">노란색</td><td value="blue">파란색</td>
+        </tr>
+        <tr>
+            <td value="grey">회색</td><td value="black">검정색</td><td value="pink">분홍색</td><td value="brown">갈색</td>
+        </tr>
+
+    </table>
+    <div id="box"class="boxx"></div>
+    <script>
+        var box = document.getElementById('box');
+        var tablee = document.getElementById('tablee');
+
+        function color_change() {
+            box.style.background = tablee.value;
+        }
+    </script>
+
+</body>
+</html>

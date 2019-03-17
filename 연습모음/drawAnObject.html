@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>smile</title>
+  </head>
+  <body>
+    <p>잠을 푹 자고 일어나니 개운하네요^^</p>
+    <canvas id="canvas" width="800" height="800"></canvas>
+    <script type="text/javascript">
+      var canvas = document.getElementById('canvas');
+      var smile = canvas.getContext("2d");
+
+      smile.beginPath();
+      smile.arc(100,100,60,0,360);
+      smile.stroke();
+      smile.moveTo(80,80);
+      smile.arc(70,80,10,0,360);
+      smile.stroke();
+      smile.moveTo(140,80);
+      smile.arc(130,80,10,0,360);
+      smile.stroke();
+      smile.moveTo(130,110);
+      smile.arc(100,110,30,Math.PI*2,Math.PI*1,false);
+      smile.stroke();
+
+    </script>
+
+  </body>
+</html>

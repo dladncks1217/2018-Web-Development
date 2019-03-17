@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>1029_2</title>
+    <style media="screen">
+      .box{
+        width:200px;
+        height:200px;
+        box-shadow: 0px 0px 3px 3px grey;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" onmouseover="colors_change()" onmouseout="colors_back()">
+
+    </div>
+    <script type="text/javascript">
+    var box = document.querySelector('div');
+      function colors_change(){
+        box.style.background = "red";
+      }
+      function colors_back(){
+        box.style.background = "white";
+      }
+    </script>
+
+  </body>
+</html>

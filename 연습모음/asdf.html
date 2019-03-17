@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>asdf</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var now = new Date();
+      var years = now.getFullYear();
+      var months = now.getMonth()+1;
+      var date = now.getDate();
+
+      document.writeln(years+" 년 "+months+" 월 "+date+" 일 ");
+
+      var set = new Date();
+      var syear = set.setFullYear(2018);
+      var smonth = set.setMonth(13);
+      var sdate = set.setDate(13);
+
+      document.write(now.getDate()-set.getDate());
+
+    </script>
+  </body>
+</html>

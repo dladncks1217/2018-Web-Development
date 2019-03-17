@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>9월7일 js연습</title>
+    <style>
+        .box{
+            padding:200px;
+            margin:40px auto;
+            height:300px;
+            width:300px;
+            border:solid  outset;
+            box-shadow:0px 0px 3px 3px black;
+        }
+        .slt{
+            font-size:20px;
+            width:200px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <select id="colors" onchange="color_change()" class="slt">
+        <option value="white">하얀색</option>
+        <option value="red">빨간색</option>
+        <option value="yellow">노란색</option>
+        <option value="green">초록색</option>
+        <option value="pink">분홍색</option>
+    </select>
+    <div class="box" id="boxc" ></div>
+    <script>
+        var opt = document.getElementById('colors');
+        var divv = document.getElementById('boxc');
+
+        function color_change() {
+            divv.style.background=opt.value;
+
+        }
+         
+
+    </script>
+
+
+
+</body>
+
+</html>

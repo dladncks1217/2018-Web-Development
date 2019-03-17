@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>1030_2_code</title>
+  </head>
+  <body>
+    <input type="text" id="num_1">+
+    <input type="text" id="num_2">
+    <input type="button" value="=" onclick="calculate()">
+    <input type="text" id="value">
+    <script type="text/javascript">
+
+
+      function calculate(){
+        var num_1 = document.getElementById('num_1').value;
+        var num_2 = document.getElementById('num_2').value;
+        var num_3 = document.getElementById('value').value = eval(num_1)+eval(num_2);
+
+      }
+
+    </script>
+
+  </body>
+</html>

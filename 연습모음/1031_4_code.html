@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>1031_4_code</title>
+    <style media="screen">
+      div{
+        background-color:white;
+        height:200px;
+        width:200px;
+        box-shadow:0px 0px 3px 3px grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" onmousewheel="color_change()">
+
+    </div>
+    <script type="text/javascript">
+      var box=document.getElementById('box');
+      var i=1;
+      function color_change(){
+        console.log(i);
+        if(i==1){
+          box.style.background = "red"
+          return i=0;}
+        else if(i==0){
+          box.style.background="white"
+          return i=1;}
+
+      }
+
+    </script>
+  </body>
+</html>

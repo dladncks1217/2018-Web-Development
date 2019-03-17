@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <canvas id="can" width="200px" height="200px"></canvas>
+    <script type="text/javascript">
+      var can = document.getElementById("can");
+      var context = can.getContext("2d");
+
+      context.arc(100,100,30,Math.PI*1.5,Math.PI*1,false);
+      context.stroke();
+
+    </script>
+  </body>
+</html>

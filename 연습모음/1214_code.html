@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var hi = 0;
+      function func(){
+        this.hello = 1;
+        document.writeln(this.hello);
+      }
+      document.writeln(this.hello);
+      func();
+
+    </script>
+  </body>
+</html>

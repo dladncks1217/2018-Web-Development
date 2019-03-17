@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>1029_3_code</title>
+    <style media="screen">
+      .box{
+        width:100px;
+        height:100px;
+        box-shadow:0px 0px 3px 3px grey;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1" onmouseout="color_back()">
+      <tr>
+        <td onmouseover="red_change()">빨강</td>
+      </tr>
+      <tr>
+        <td onmouseover="yellow_change()">노랑</td>
+      </tr>
+      <tr>
+        <td onmouseover="blue_change()">파랑</td>
+      </tr>
+    </table>
+    <div class="box">
+
+    </div>
+    <script type="text/javascript">
+      var box = document.querySelector('div');
+      function red_change(){
+        box.style.background="red";
+      }
+      function yellow_change(){
+        box.style.background="yellow";
+      }
+      function blue_change(){
+        box.style.background="blue";
+      }
+      function color_back(){
+        box.style.background="white";
+      }
+
+    </script>
+  </body>
+</html>

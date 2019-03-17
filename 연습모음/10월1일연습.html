@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>10월1일 연습</title>
+    <style>
+      #rullet{
+        font-size: 20px;
+        width:150px;
+      }
+      #box{
+        width:300px;
+        height:400px;
+        box-shadow: 0px 0px 3px 3px grey;
+        margin-left: 200px;
+      }
+      #btn{text-align:left; font-size:20px; width:130px;}
+    </style>
+  </head>
+  <body>
+    <input type="button" value="change" id="btn">
+    <select id="rullet" onchange="color_change();">
+      <option value="white">white</option>
+      <option value="red">red</option>
+      <option value="orange">orange</option>
+      <option value="yellow">yellow</option>
+      <option value="green">green</option>
+    </select>
+
+    <div id="box"></div>
+
+    <script>
+      var boxx = document.getElementById('box');
+      var rullett = document.getElementById('rullet');
+      var bttn = document.getElementById('btn');
+      var i = 0;
+
+      bttn.addEventListener('click',function(){
+        if(i===0){
+          boxx.style.background = "red";
+          i++;
+          return i;}
+        else if(i===1){
+          boxx.style.background = "orange";
+          i++;
+          return i;}
+        else if(i===2){
+          boxx.style.background = "yellow";
+          i++;
+          return i;}
+        else if(i===3){
+          boxx.style.background = "green";
+          i=i-3;
+          return i;}
+      })
+
+
+      function color_change(){
+        boxx.style.background = rullett.value;
+      }
+    </script>
+
+  </body>
+</html>

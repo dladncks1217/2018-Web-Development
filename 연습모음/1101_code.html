@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>number_baseballgame</title>
+    <script type="text/javascript">
+      var button = document.getElementById('button');
+
+      var answer = Math.floor(Math.random()*3)+1;
+      console.log(answer);
+      var answer_1 = answer.substr(0,1);
+      var answer_2 = answer.substr(1,2);
+      var answer_3 = answer.substr(2,3);
+
+      function try(){
+        for(var try_time=1 ;answer==try_answer;try_time++){
+        var strike = 0;
+        var ball = 0;
+        var try_answer = prompt('예상되는 숫자를 입력하세요.');
+        var try_answer_1 = try_answer.substr(0,1);
+        var try_answer_2 = try_answer.substr(1,2);
+        var try_answer_3 = try_answer.substr(2,3);
+
+        if(answer_1==try_answer_1){
+          strike++;
+        }
+        else if(answer_2==try_answer_2){
+          strike++;
+        }
+        else if(answer_3==try_answer_3){
+          strike++;
+        }
+        else if(answer_1==try_answer_2){
+          ball++;
+        }
+        else if(answer_1==try_answer_3){
+          ball++;
+        }
+        else if(answer_2==try_answer_3){
+          ball++;
+        }
+        else if(answer_3==try_answer_2){
+          ball++;
+        }
+        else if(answer_3==try_answer_1){
+          ball++;
+        }
+        else if(answer_2==try_answer_1){
+          ball++;
+        }
+        else if(strike!=3){
+          button.value = i+"번째 도전";
+          document.write(strike+"스트라이크"+ball+"볼 입니다.");
+          continue;
+        }
+        else if(strike==3){
+          document.write("정답입니다!"+try_time+"번 만에 맞췄습니다!");
+          return;
+        }
+
+
+
+
+      }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>숫자야구게임</h1>
+    <input type="button" value="1 번째 도전" id="button" onclick="try()">
+
+  </body>
+</html>

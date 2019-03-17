@@ -1,0 +1,39 @@
+﻿<!Doctype html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>9월29일 연습</title>
+    
+</head>
+<body>
+    <h1>안녕얘들아</h1>
+    <input type="button" value="change" id="button"/>
+    <script>
+        var btn = document.getElementById('button');
+        var hi = document.querySelector('h1');
+        var i = 0;
+        btn.addEventListener('click', function color_change() {
+
+           
+            
+           
+                if (i === 0) {
+                    hi.style.color = 'red';
+                    hi.style.background = 'yellow';
+                    i++;
+                    return i;
+                }
+                else if (i === 1) {
+                    hi.style.color = 'black';
+                    hi.style.background = 'white';
+                    i--;
+                    return i;
+
+             
+            }
+        })
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>rolling minjoon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrap {
+            margin: 60px auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .appa {
+            width: 100%;
+            height: 200px;
+            position: relative;
+        }
+
+            .appa img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200px;
+                height: 200px;
+                transition: 10s ease;
+                transform: rotate(0deg);
+            }
+
+        .appa:hover img {
+            left: 100%;
+            transform: rotate(360deg);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <h1>굴러가는 민준</h1>
+        <div class="appa"> <img src="C:\Users\dlaxo\OneDrive\바탕 화면/KakaoTalk_20180726_135308758.jpg" alt="그냥 사진"></div>
+    </div>
+
+</body>
+</html>

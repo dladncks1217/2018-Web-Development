@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>숫자야구게임</title>
+    <style media="screen">
+    #backgrounds{
+      background-image:url(http://engagingtheshadowsofyouthministry.com/wp-content/uploads/2011/08/ColdSpringBaseballPark.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .입력란{
+      box-shadow:0px 0px 2px 2px red;
+    }
+    header{
+      font-family:TTche;
+      text-align:center;
+      font-size:25px;
+      font-weight:bold;
+    }
+      #answer_board{
+        height:250px;
+        box-shadow:0px 0px 3px 3px red;
+        width:660px;
+        text-align:center;
+
+      }
+      #answer_board{
+        font-family:TTche;
+        font-weight:bold;
+      }
+      #game{
+
+        background-color:rgba(100, 100, 100, 0.5);
+      }
+      .results{
+        width:660px;
+        height:20px;
+        margin:2px;
+        box-shadow:1px 1px 1px 1px red;
+      }
+    </style>
+    <script type="text/javascript">
+      var num1,num2,num3;
+      var text1, text2, text3;
+      var strike, ball;
+      var tries = 0;
+
+/* -------------------------------------------------변수생성----------------------------------------------------------- */
+
+      function start(){
+        num1 = Math.floor(Math.random()*9);
+        num2 = num1;
+        num3 = num1;
+
+        for(;;){
+          if(num1!=num2){
+            break;
+          }
+          else{num1 = Math.floor(Math.random()*9)}
+        }
+
+        for(;;){
+            if(num2!=num3 && num1!=num3){
+              break;
+            }
+            else{num3 = Math.floor(Math.random()*9)}
+        }
+        console.log(num1);
+        console.log(num2);
+        console.log(num3);
+        document.getElementById('text1').focus();
+      }
+
+/* -------------------------------------------------------입력내용 결과 확인함수----------------------------------------------------- */
+
+      function answer(){
+        tries++;
+/* ------------------------------------------------예전결과값id받아오기------------------------------------------------------------ */
+        board1 = document.getElementById('board1');
+        board2 = document.getElementById('board2');
+        board3 = document.getElementById('board3');
+        board4 = document.getElementById('board4');
+        board5 = document.getElementById('board5');
+        board6 = document.getElementById('board6');
+        board7 = document.getElementById('board7');
+        board8 = document.getElementById('board8');
+        board9 = document.getElementById('board9');
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+      text_1 = document.getElementById("text1").value;
+      text_2 = document.getElementById("text2").value;
+      text_3 = document.getElementById("text3").value;
+      answer_board = document.getElementById("answer_board");
+
+
+      console.log(text_1);
+      console.log(text_2);
+      console.log(text_3);
+
+      document.getElementById("text1").value="";
+      document.getElementById("text2").value="";
+      document.getElementById("text3").value="";
+
+      strike = 0;
+      ball = 0;
+
+      if(tries>9){
+        answer_board.value = "정답은"+num1+num2+num3+" 였습니다. "+"시도 횟수가 9번을 초과했습니다. 새로운 게임을 시작해주세요."
+      return;
+    }
+
+      if((text1="") || (text2="") || (text3="")){
+        answer_board.value = text_1+', '+text_2+', '+text_3+' '+"잘못 입력하셨습니다."+ '\n' + answer_board.value + tries +" 번 시도했습니다.";
+      }
+      else{
+        if(num1==text_1){
+          strike++;
+        }
+        if(num1==text_2){
+          ball++;
+        }
+        if(num1==text_3){
+          ball++;
+        }
+        if(num2==text_2){
+          strike++;
+        }
+        if(num2==text_3){
+          ball++;
+        }
+        if(num2==text_1){
+          ball++;
+        }
+        if(num3==text_3){
+          strike++;
+        }
+        if(num3==text_2){
+          ball++;
+        }
+        if(num3==text_1){
+          ball++;
+        }
+/* ------------------------------------------------------예전결과출력판------------------------------------------------------ */
+                if(tries==1){board1.value = "1회  "+text_1+", "+text_2+", "+text_3+"                                                                                                                                                        "+strike+"s "+ball+"b";}
+                if(tries==2){board2.value = "2회  "+text_1+", "+text_2+", "+text_3+"                                                                                                                                                        "+strike+"s "+ball+"b";}
+                if(tries==3){board3.value = "3회  "+text_1+", "+text_2+", "+text_3+"                                                                                                                                                        "+strike+"s "+ball+"b";}
+                if(tries==4){board4.value = "4회  "+text_1+", "+text_2+", "+text_3+"                                                                                                                                                        "+strike+"s "+ball+"b";}
+                if(tries==5){board5.value = "5회  "+text_1+", "+text_2+", "+text_3+"                                                                                                                                                        "+strike+"s "+ball+"b";}
+                if(tries==6){board6.value = "6회  "+text_1+", "+text_2+", "+text_3+"                                                                                                                                                        "+strike+"s "+ball+"b";}
+                if(tries==7){board7.value = "7회  "+text_1+", "+text_2+", "+text_3+"                                                                                                                                                        "+strike+"s "+ball+"b";}
+                if(tries==8){board8.value = "8회  "+text_1+", "+text_2+", "+text_3+"                                                                                                                                                        "+strike+"s "+ball+"b";}
+                if(tries==9){board9.value = "9회  "+text_1+", "+text_2+", "+text_3+"                                                                                                                                                        "+strike+"s "+ball+"b";}
+
+/* ------------------------------------------------------결과 출력판----------------------------------------------------- */
+
+
+        if(strike==3){
+          answer_board.value = text_1+', '+text_2+', '+text_3+',           '+"3스트라이크 경기 종료!   "+tries+" 번 시도만에 성공했습니다.";
+        }
+        else if(strike==0&&ball==0){
+          answer_board.value = text_1+', '+text_2+', '+text_3+',           '+"3아웃!   " + tries +" 번째 시도입니다.";
+        }
+        else{
+          answer_board.value = text_1+', '+text_2+', '+text_3+',           '+strike+"스트라이크    "+ball+" 볼    "+tries+" 번째 시도입니다.";
+        }
+
+
+        document.getElementById('text1').focus();
+      }
+    }
+
+    </script>
+  </head>
+
+<!-- ............................................-바디태그시작-............................................................. -->
+
+  <body onload="start()" id="backgrounds">
+    <header>
+    <h1>숫자야구게임</h1>
+
+  </header>
+    <hr>
+    <article id="game">
+    <center>
+    <form class="" action="index.html" method="post">
+      <input type="text" maxlength='1' id="text1" class="입력란" >
+      <input type="text" maxlength='1' id="text2" class="입력란">
+      <input type="text" maxlength='1' id="text3" class="입력란">
+      <input type="button" size='1' maxlength='1' value="정답 확인" onclick="answer()">
+
+    </form>
+    <br>
+
+    <textarea  id="answer_board"readonly>
+
+      1. 컴퓨가 0~9까지 숫자 중 3가지를 골라 세 자리 숫자를 만듭니다
+      2. 사용자는 정답이라고 생각되는 세 자리 숫자를 말합니다.
+      3. 숫자의 위치에 따라 스트라이크, 볼을 말합니다.
+      4. 3자리 숫자를 9회가 되기 전에 모두 맞추면 게임이 끝납니다.
+
+      스트라이크 - 자리와 숫자 모두 맞을 경우
+      볼 - 숫자만 맞을경우
+      3자리 숫자의 자릿수는 중복되지 않습니다.
+    </textarea>
+    <br>
+    <input type="textarea" id="board1" class="results" readonly value="1회">
+    <br>
+    <input type="textarea" id="board2" class="results" readonly value="2회">
+    <br>
+    <input type="textarea" id="board3" class="results" readonly value="3회">
+    <br>
+    <input type="textarea" id="board4" class="results" readonly value="4회">
+    <br>
+    <input type="textarea" id="board5" class="results" readonly value="5회">
+    <br>
+    <input type="textarea" id="board6" class="results" readonly value="6회">
+    <br>
+    <input type="textarea" id="board7" class="results" readonly value="7회">
+    <br>
+    <input type="textarea" id="board8" class="results" readonly value="8회">
+    <br>
+    <input type="textarea" id="board9" class="results" readonly value="9회">
+    <br>
+    <input type="button" size="1" maxlength="1" value="새 게임 시작" onclick="location.reload()">
+  </center>
+  </article>
+
+  </body>
+</html>

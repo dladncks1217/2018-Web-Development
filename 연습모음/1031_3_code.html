@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>1031_1_code</title>
+    <style media="screen">
+      #div{
+        height:200px;
+        font-size:50px;
+      }
+    </style>
+  </head>
+  <body>
+<div id="box">순위예측</div>
+<select id="choice"onchange="check()">
+  <option value="choose">선택하세요</option>
+  <option value="man_city">맨시티</option>
+  <option value="liverpool">리버풀</option>
+  <option value="chelsea">첼시</option>
+  <option value="asnal">아스널</option>
+  <option value="totenham">토트넘</option>
+  <option value="bonmers">본머스</option>
+  <option value="watford">왓포드</option>
+  <option value="man_U">맨유</option>
+  <option value="evreton">에버튼</option>
+  <option value="woolverhamton">울버햄튼</option>
+  <option value="briten">브라이튼</option>
+  <option value="lester">레스터 시티</option>
+  <option value="westham">웨스트햄</option>
+  <option value="cristal_p">크리스탈 팰리스</option>
+  <option value="bernley">번리</option>
+  <option value="southham">사우스 햄튼</option>
+  <option value="kadif">카디프 시티</option>
+  <option value="fullum">풀럼</option>
+  <option value="newcastle">뉴캐슬</option>
+  <option value="hudusfield">허더스필드</option>
+  <input type="button" id="button" onclick="team_grade()" value="결과확인">
+
+</select>
+    <script type="text/javascript">
+      var button = document.getElementById('button');
+      var choice = document.getElementById('choice').value;
+      var box = document.getElementById('box');
+      var rand = Math.floor(Math.random()*20)+1;
+
+      function check(){
+      choice = document.getElementById('choice').value;
+      rand =Math.floor(Math.random()*20)+1;
+      }
+
+    function team_grade(){
+      if(choice=="man_U"){
+      alert("10위");
+    }
+      else if(choice!="man_u"){
+      if(rand==10){check();}
+      alert(rand+"위");
+
+      }
+
+    }
+
+
+
+    </script>
+  </body>
+</html>

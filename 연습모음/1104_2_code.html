@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="button" id="button" value="시작" onclick="user_get()">
+    <script type="text/javascript">
+
+      var button = document.getElementById('button');
+      var number = {};
+      number['answer_1'] = Math.floor(Math.random()*9)+1;
+      number['answer_2'] = Math.floor(Math.random()*10);
+      number['answer_3'] = Math.floor(Math.random()*10);
+
+      for(;;){
+        if((number.answer_1==number.answer_2)||(number.answer_1==number.answer_3)||(number.answer_2==number.answer_3)){
+          number.answer_1 = Math.floor(Math.random()*9)+1;
+          number.answer_2 = Math.floor(Math.random()*10);
+          number.answer_3 = Math.floor(Math.random()*10);
+        }
+        else if((number.answer_1!=number.answer_2)&&(number.answer_1!=number.answer_3)&&(number.answer_2!=number.answer_3)){
+          break;
+        }
+      }
+      console.log(number['answer_1']);
+      console.log(number['answer_2']);
+      console.log(number['answer_3']);
+
+      var result_value = parseInt(String(number.answer_1)+String(number.answer_2)+String(number.answer_3));
+      console.log(result_value);
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------- -->
+      var user_answer;
+      function user_get(){
+        user_answer = String(prompt("세 자리 숫자를 입력."));
+
+      }
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------- -->
+      var user = {};
+      user['num_1'] = user_answer.substr(0,1);
+      user['num_2'] = user_answer.substr(1,2);
+      user['num_3'] = user_answer.substr(2,3);
+
+      console.log(user_answer);
+      console.log(user['num_1']);
+      console.log(user['num_2']);
+      console.log(user['num_3']);
+
+    </script>
+  </body>
+</html>

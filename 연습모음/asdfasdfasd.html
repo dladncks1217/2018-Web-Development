@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>table</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var i =0;
+    var employee={'member':['김창섭','박영권','이수민']};
+    var number = {'numbers':[2106,3426,1003]};
+    var job = {'jobs':['대리','과장','부장']};
+
+    document.write("<table border='1>");
+    document.write("<captoin>Employee</caption>")
+    document.write("<tr>");
+    document.write("<td>");
+    document.write("사번");
+    document.write("</td>");
+    document.write("<td>");
+    document.write("이름");
+    document.write("</td>");
+    document.write("<td>");
+    document.write("직책");
+    document.write("</td>");
+    document.write("</tr>");
+
+
+    for(;i<3;i++){
+    document.write("<tr>");
+    document.write("<td>"+number.numbers[i]+"</td>");
+    document.write("<td>"+employee.member[i]+"</td>");
+
+    document.write("<td>"+job.jobs[i]+"</td>");
+    document.write("</tr>");
+  }
+
+
+    document.write("</table>")
+    </script>
+  </body>
+</html>

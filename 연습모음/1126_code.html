@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var age = 100;
+      function person(a,b,c,d,e){
+        console.log(this.age);
+        console.log(arguments);
+
+      }
+      var ken = {
+        age:43
+      }
+      person.call(ken, 1,2,3,4);
+      person.apply(ken,[1,2,3,4,5]);
+
+
+
+    </script>
+  </body>
+</html>

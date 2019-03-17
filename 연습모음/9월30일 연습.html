@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>9월30일 연습</title>
+    <style media="screen">
+      .box{
+        background-color: white;
+        width:300px;
+        height:350px;
+        box-shadow: 0px 0px 5px 5px;
+      }
+      .btn{width:40px; font-size: 30px;}
+    </style>
+  </head>
+  <body>
+    <input type="button" id="btn" value="change!">
+    <div class="box"></div>
+  <script type="text/javascript">
+    var boxx=document.querySelector('div');
+    var bttn=document.getElementById('btn');
+    var i=0;
+    bttn.addEventListener('click',function(){
+      if(i===0){
+        boxx.style.background='red';
+        i++;
+        return i;
+      }
+      else if(i===1){
+        boxx.style.background='orange';
+        i++;
+        return i;
+      }
+      else if(i===2){
+        boxx.style.background='yellow';
+        i++;
+        return i;
+      }
+      else if(i===3){
+        boxx.style.background='green';
+        i=i-3;
+        return i;
+      }
+    })
+  </script>
+
+  </body>
+</html>
